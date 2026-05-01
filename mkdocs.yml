@@ -5,14 +5,8 @@ repo_url: https://github.com/ialameh/salesforce-devops-field-guide
 repo_name: ialameh/salesforce-devops-field-guide
 edit_uri: edit/main/
 
-docs_dir: .
+docs_dir: docs
 site_dir: site
-exclude_docs: |
-  LICENSE
-  .github/
-  .git/
-  site/
-  node_modules/
 
 theme:
   name: material
@@ -53,7 +47,7 @@ theme:
     edit: material/pencil
 
 nav:
-  - Home: README.md
+  - Home: index.md
   - Quickstart: 00-quickstart.md
   - Foundations:
     - The Mental Model: 01-mental-model.md
