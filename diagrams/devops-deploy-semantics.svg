@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="ds-ds" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="620" fill="#ffffff"/>
+
+  <text x="550" y="34" font-size="22" font-weight="700" text-anchor="middle" fill="#0f172a">Deploy, Push, Validate, Quick Deploy</text>
+  <text x="550" y="56" font-size="13" text-anchor="middle" fill="#64748b">Four operations that look similar and behave differently. Picking wrong wastes hours.</text>
+
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="40" y="90" width="180" height="40" rx="6" fill="#0f172a"/>
+    <text x="130" y="115" fill="#ffffff">Operation</text>
+    <rect x="225" y="90" width="200" height="40" rx="6" fill="#15803d"/>
+    <text x="325" y="115" fill="#ffffff">push (scratch / dev)</text>
+    <rect x="430" y="90" width="200" height="40" rx="6" fill="#1d4ed8"/>
+    <text x="530" y="115" fill="#ffffff">deploy</text>
+    <rect x="635" y="90" width="200" height="40" rx="6" fill="#d97706"/>
+    <text x="735" y="115" fill="#ffffff">deploy --check (validate)</text>
+    <rect x="840" y="90" width="220" height="40" rx="6" fill="#be185d"/>
+    <text x="950" y="115" fill="#ffffff">deploy quick</text>
+  </g>
+
+  <g font-size="11">
+    <rect x="40" y="135" width="180" height="36" fill="#f1f5f9"/>
+    <text x="55" y="158" font-weight="600" fill="#0f172a">CLI command</text>
+    <text x="325" y="158" text-anchor="middle" fill="#166534">sf project deploy start</text>
+    <text x="530" y="158" text-anchor="middle" fill="#1e40af">sf project deploy start</text>
+    <text x="735" y="158" text-anchor="middle" fill="#92400e">deploy validate</text>
+    <text x="950" y="158" text-anchor="middle" fill="#9d174d">deploy quick</text>
+
+    <rect x="40" y="173" width="180" height="36" fill="#ffffff"/>
+    <text x="55" y="196" font-weight="600" fill="#0f172a">Source tracking required</text>
+    <text x="325" y="196" text-anchor="middle" fill="#166534">Yes (default)</text>
+    <text x="530" y="196" text-anchor="middle" fill="#1e40af">Optional</text>
+    <text x="735" y="196" text-anchor="middle" fill="#92400e">Optional</text>
+    <text x="950" y="196" text-anchor="middle" fill="#9d174d">N/A</text>
+
+    <rect x="40" y="211" width="180" height="36" fill="#f1f5f9"/>
+    <text x="55" y="234" font-weight="600" fill="#0f172a">Modifies target org</text>
+    <text x="325" y="234" text-anchor="middle" fill="#166534">Yes</text>
+    <text x="530" y="234" text-anchor="middle" fill="#1e40af">Yes</text>
+    <text x="735" y="234" text-anchor="middle" fill="#92400e">No (validation only)</text>
+    <text x="950" y="234" text-anchor="middle" fill="#9d174d">Yes (uses prior validation)</text>
+
+    <rect x="40" y="249" width="180" height="36" fill="#ffffff"/>
+    <text x="55" y="272" font-weight="600" fill="#0f172a">Runs Apex tests</text>
+    <text x="325" y="272" text-anchor="middle" fill="#166534">By default in changes</text>
+    <text x="530" y="272" text-anchor="middle" fill="#1e40af">Per --test-level flag</text>
+    <text x="735" y="272" text-anchor="middle" fill="#92400e">Per --test-level flag</text>
+    <text x="950" y="272" text-anchor="middle" fill="#9d174d">Reuses test results</text>
+
+    <rect x="40" y="287" width="180" height="36" fill="#f1f5f9"/>
+    <text x="55" y="310" font-weight="600" fill="#0f172a">Rollback</text>
+    <text x="325" y="310" text-anchor="middle" fill="#166534">Auto on failure</text>
+    <text x="530" y="310" text-anchor="middle" fill="#1e40af">Auto on failure</text>
+    <text x="735" y="310" text-anchor="middle" fill="#92400e">No state to roll back</text>
+    <text x="950" y="310" text-anchor="middle" fill="#9d174d">Auto on failure</text>
+
+    <rect x="40" y="325" width="180" height="36" fill="#ffffff"/>
+    <text x="55" y="348" font-weight="600" fill="#0f172a">Right for</text>
+    <text x="325" y="348" text-anchor="middle" fill="#166534">Dev iteration</text>
+    <text x="530" y="348" text-anchor="middle" fill="#1e40af">Sandbox deploys</text>
+    <text x="735" y="348" text-anchor="middle" fill="#92400e">Pre-prod check</text>
+    <text x="950" y="348" text-anchor="middle" fill="#9d174d">Production cut-over</text>
+
+    <rect x="40" y="363" width="180" height="36" fill="#f1f5f9"/>
+    <text x="55" y="386" font-weight="600" fill="#0f172a">Time</text>
+    <text x="325" y="386" text-anchor="middle" fill="#166534">Seconds</text>
+    <text x="530" y="386" text-anchor="middle" fill="#1e40af">Minutes to hours</text>
+    <text x="735" y="386" text-anchor="middle" fill="#92400e">Minutes to hours</text>
+    <text x="950" y="386" text-anchor="middle" fill="#9d174d">Seconds to minutes</text>
+  </g>
+
+  <g filter="url(#ds-ds)">
+    <rect x="40" y="425" width="1020" height="180" rx="10" fill="#0f172a" stroke="#0f172a"/>
+  </g>
+  <text x="60" y="450" font-size="13" font-weight="700" fill="#fff">Validate-then-Quick-Deploy: the production pattern</text>
+  <text x="60" y="473" font-size="11" fill="#cbd5e1">For production deploys, run a `validate` first. Salesforce caches the result for 4 days. If validation passes, follow with `deploy quick`</text>
+  <text x="60" y="490" font-size="11" fill="#cbd5e1">using the validated job id. The quick deploy reuses the test results, skipping the long re-run. Cuts a 90-minute deploy to 5 minutes.</text>
+
+  <text x="60" y="520" font-size="13" font-weight="700" fill="#fff">Common mistakes</text>
+  <text x="60" y="540" font-size="11" fill="#cbd5e1">- `push` to a sandbox or production. The CLI rejects it; sandboxes are not source-tracked the same way.</text>
+  <text x="60" y="558" font-size="11" fill="#cbd5e1">- `deploy --test-level NoTestRun` to production. Salesforce rejects this. Production needs RunLocalTests or RunAllTests.</text>
+  <text x="60" y="576" font-size="11" fill="#cbd5e1">- Skipping validate. Production deploys then have to re-run all tests. Hours wasted.</text>
+  <text x="60" y="594" font-size="11" fill="#cbd5e1">- Using `--ignore-conflicts` on production. Eats your colleague's changes silently. Never use this on a shared org.</text>
+</svg>

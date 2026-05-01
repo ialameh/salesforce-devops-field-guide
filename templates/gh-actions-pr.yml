@@ -1,0 +1,39 @@
+name: PR validation
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Authenticate to Dev Hub
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL_DEVHUB }}
+        run: |
+          echo "$SFDX_AUTH_URL" > /tmp/auth.txt
+          sf org login sfdx-url --sfdx-url-file /tmp/auth.txt --alias devhub --set-default-dev-hub
+
+      - name: Create scratch org
+        run: |
+          sf org create scratch \
+            --definition-file config/project-scratch-def-ci.json \
+            --alias ci-org \
+            --duration-days 1 \
+            --set-default
+
+      - name: Deploy
+        run: sf project deploy start --target-org ci-org
+
+      - name: Run Apex tests
+        run: sf apex run test --target-org ci-org --code-coverage --result-format junit --output-dir test-results --wait 30
+
+      - name: Cleanup
+        if: always()
+        run: sf org delete scratch --target-org ci-org --no-prompt || true

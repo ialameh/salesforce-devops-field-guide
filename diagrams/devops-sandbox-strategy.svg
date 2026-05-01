@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 580" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr-sb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <filter id="ds-sb" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="580" fill="#ffffff"/>
+
+  <text x="550" y="34" font-size="22" font-weight="700" text-anchor="middle" fill="#0f172a">Sandbox Strategy</text>
+  <text x="550" y="56" font-size="13" text-anchor="middle" fill="#64748b">Five sandbox types. Most teams need three of them. Refresh discipline matters as much as the choice.</text>
+
+  <!-- Sandbox cards -->
+  <g filter="url(#ds-sb)">
+    <rect x="40" y="100" width="200" height="170" rx="10" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+  </g>
+  <text x="140" y="130" font-size="14" font-weight="700" text-anchor="middle" fill="#14532d">Developer</text>
+  <text x="140" y="150" font-size="10" font-style="italic" text-anchor="middle" fill="#166534">Personal workspace</text>
+  <text x="60" y="180" font-size="11" fill="#15803d">Free with most editions</text>
+  <text x="60" y="198" font-size="11" fill="#15803d">200 MB data</text>
+  <text x="60" y="216" font-size="11" fill="#15803d">Refresh: 1 day</text>
+  <text x="60" y="234" font-size="11" fill="#15803d">Per-developer</text>
+  <text x="60" y="258" font-size="11" font-weight="700" fill="#15803d">Use: ad-hoc dev</text>
+
+  <g filter="url(#ds-sb)">
+    <rect x="260" y="100" width="200" height="170" rx="10" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+  </g>
+  <text x="360" y="130" font-size="14" font-weight="700" text-anchor="middle" fill="#172554">Developer Pro</text>
+  <text x="360" y="150" font-size="10" font-style="italic" text-anchor="middle" fill="#1e40af">Same as Developer +</text>
+  <text x="280" y="180" font-size="11" fill="#1d4ed8">Add-on cost</text>
+  <text x="280" y="198" font-size="11" fill="#1d4ed8">1 GB data</text>
+  <text x="280" y="216" font-size="11" fill="#1d4ed8">Refresh: 1 day</text>
+  <text x="280" y="234" font-size="11" fill="#1d4ed8">More config storage</text>
+  <text x="280" y="258" font-size="11" font-weight="700" fill="#1d4ed8">Use: data-heavy dev</text>
+
+  <g filter="url(#ds-sb)">
+    <rect x="480" y="100" width="200" height="170" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  </g>
+  <text x="580" y="130" font-size="14" font-weight="700" text-anchor="middle" fill="#78350f">Partial Copy</text>
+  <text x="580" y="150" font-size="10" font-style="italic" text-anchor="middle" fill="#92400e">Subset of prod data</text>
+  <text x="500" y="180" font-size="11" fill="#b45309">5 GB data</text>
+  <text x="500" y="198" font-size="11" fill="#b45309">Refresh: 5 days</text>
+  <text x="500" y="216" font-size="11" fill="#b45309">Sandbox template</text>
+  <text x="500" y="234" font-size="11" fill="#b45309">Cost mid-tier</text>
+  <text x="500" y="258" font-size="11" font-weight="700" fill="#b45309">Use: integration testing</text>
+
+  <g filter="url(#ds-sb)">
+    <rect x="700" y="100" width="200" height="170" rx="10" fill="#ddd6fe" stroke="#6d28d9" stroke-width="2"/>
+  </g>
+  <text x="800" y="130" font-size="14" font-weight="700" text-anchor="middle" fill="#3b0764">Full</text>
+  <text x="800" y="150" font-size="10" font-style="italic" text-anchor="middle" fill="#5b21b6">Complete prod copy</text>
+  <text x="720" y="180" font-size="11" fill="#6d28d9">Same size as prod</text>
+  <text x="720" y="198" font-size="11" fill="#6d28d9">Refresh: 29 days</text>
+  <text x="720" y="216" font-size="11" fill="#6d28d9">Higher cost</text>
+  <text x="720" y="234" font-size="11" fill="#6d28d9">Includes data</text>
+  <text x="720" y="258" font-size="11" font-weight="700" fill="#6d28d9">Use: UAT, perf testing</text>
+
+  <g filter="url(#ds-sb)">
+    <rect x="920" y="100" width="160" height="170" rx="10" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+  </g>
+  <text x="1000" y="130" font-size="14" font-weight="700" text-anchor="middle" fill="#831843">Scratch</text>
+  <text x="1000" y="150" font-size="10" font-style="italic" text-anchor="middle" fill="#9d174d">Disposable</text>
+  <text x="935" y="180" font-size="11" fill="#be185d">Created on-demand</text>
+  <text x="935" y="198" font-size="11" fill="#be185d">Up to 30 days</text>
+  <text x="935" y="216" font-size="11" fill="#be185d">Source-tracked</text>
+  <text x="935" y="234" font-size="11" fill="#be185d">From DevHub</text>
+  <text x="935" y="258" font-size="11" font-weight="700" fill="#be185d">Use: CI, isolated dev</text>
+
+  <!-- Refresh cadence -->
+  <text x="40" y="310" font-size="14" font-weight="700" fill="#0f172a">Refresh cadence: a typical schedule</text>
+
+  <g filter="url(#ds-sb)">
+    <rect x="40" y="325" width="1040" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  </g>
+  <text x="60" y="350" font-size="12" font-weight="700" fill="#0f172a">Integration sandbox: refresh every sprint or release. Always close to main.</text>
+  <text x="60" y="370" font-size="12" font-weight="700" fill="#0f172a">QA sandbox: refresh before each release cycle. Reset state, re-seed test data.</text>
+
+  <g filter="url(#ds-sb)">
+    <rect x="40" y="395" width="1040" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  </g>
+  <text x="60" y="420" font-size="12" font-weight="700" fill="#0f172a">UAT sandbox: refresh after each prod refresh. Stakeholders validate against close-to-prod data.</text>
+  <text x="60" y="440" font-size="12" font-weight="700" fill="#0f172a">Full / staging: refresh quarterly or before major releases. Slow to refresh, big to test against.</text>
+
+  <!-- Bottom rule -->
+  <g filter="url(#ds-sb)">
+    <rect x="40" y="475" width="1040" height="80" rx="10" fill="#0f172a" stroke="#0f172a" stroke-width="2"/>
+  </g>
+  <text x="60" y="500" font-size="13" font-weight="700" fill="#fff">Refresh discipline</text>
+  <text x="60" y="522" font-size="11" fill="#cbd5e1">Stale sandboxes are landmines. Code that worked in a 2-month-old sandbox can fail in production because production has moved on.</text>
+  <text x="60" y="540" font-size="11" fill="#cbd5e1">Schedule refreshes. Document who notifies whom. After refresh, redeploy in-flight branches and re-run smoke tests.</text>
+</svg>

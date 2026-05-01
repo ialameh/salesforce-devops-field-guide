@@ -1,0 +1,12 @@
+{
+  "orgName": "CI",
+  "edition": "Developer",
+  "features": [
+    "EnableSetPasswordInApi"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}
