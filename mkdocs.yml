@@ -1,0 +1,146 @@
+site_name: Salesforce DevOps Field Guide
+site_description: Practical handbook for Salesforce DevOps engineers, architects, and developers
+site_url: https://ialameh.github.io/salesforce-devops-field-guide/
+repo_url: https://github.com/ialameh/salesforce-devops-field-guide
+repo_name: ialameh/salesforce-devops-field-guide
+edit_uri: edit/main/
+
+docs_dir: .
+site_dir: site
+exclude_docs: |
+  LICENSE
+  .github/
+  .git/
+  site/
+  node_modules/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+
+nav:
+  - Home: README.md
+  - Quickstart: 00-quickstart.md
+  - Foundations:
+    - The Mental Model: 01-mental-model.md
+    - Project Structure: 02-project-structure.md
+    - Source vs Metadata Format: 03-source-and-metadata-format.md
+  - Source Control:
+    - Branching Strategies: 04-branching.md
+    - Forceignore and Manifests: 05-forceignore-and-manifests.md
+  - Scratch Orgs:
+    - From Zero: 06-scratch-orgs-from-zero.md
+    - Definitions: 07-scratch-org-definitions.md
+    - Org Shapes: 08-org-shapes.md
+    - Source Tracking: 09-source-tracking.md
+    - Snapshots: 10-scratch-org-snapshots.md
+    - In CI: 11-scratch-orgs-in-ci.md
+    - Troubleshooting: 12-troubleshooting-scratch-orgs.md
+  - Packaging:
+    - Overview: 13-packaging-overview.md
+    - 2GP Unlocked: 14-2gp-unlocked.md
+    - 2GP Managed: 15-2gp-managed.md
+    - Dependencies and Ancestry: 16-dependencies-and-ancestry.md
+    - Versioning: 17-versioning.md
+  - Deployment:
+    - Deploy Semantics: 18-deploy-semantics.md
+    - Test Levels: 19-test-levels.md
+    - Destructive Changes: 20-destructive-changes.md
+  - CI/CD and Operations:
+    - CI/CD Architecture: 21-cicd-architecture.md
+    - Secrets and Auth: 22-secrets-and-auth.md
+    - Sandbox Strategy: 23-sandbox-strategy.md
+    - Rollback and Hotfixes: 24-rollback-and-hotfixes.md
+    - AI-Assisted Development: 25-ai-assisted-development.md
+  - Reference:
+    - Troubleshooting: 26-troubleshooting.md
+    - Anti-Patterns: 27-anti-patterns.md
+    - Glossary: 28-glossary.md
+  - Worked Material:
+    - Cookbook: cookbook/README.md
+    - Templates: templates/README.md
+    - Case Studies: case-studies/README.md
+  - Project:
+    - References: REFERENCES.md
+    - Verification: VERIFICATION.md
+    - Contributing: CONTRIBUTING.md
+    - Code of Conduct: CODE_OF_CONDUCT.md
+    - Changelog: CHANGELOG.md
+
+plugins:
+  - search:
+      lang: en
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ialameh/salesforce-devops-field-guide
+  generator: false
+
+copyright: >
+  Released under <a href="LICENSE">CC BY 4.0</a>. Salesforce, Apex, Lightning, AppExchange, and related marks are trademarks of Salesforce, Inc.
